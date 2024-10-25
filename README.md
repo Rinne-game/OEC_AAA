@@ -1,4 +1,4 @@
-# OEC_AAA
+# 大阪電通生向けかゆいところに手が届くサイト
 かゆいところに手が届くサイトです
 # 四條畷キャンパス
 https://rinne-game.github.io/OEC_AAA/index.html?Campus=Shijonawate
