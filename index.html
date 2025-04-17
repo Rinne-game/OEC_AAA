@@ -11,6 +11,8 @@
     <title>大阪電通生向けかゆいところに手が届くサイト</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/0.0.11/push.min.js"></script>
     <script src="Main.js"></script>
+    <script src="BUS_Time_KIntetsu.js"></script>
+    <script src="BUS_Time_OECU.js"></script>
     <!-- <script src="json_load.js"></script> -->
 </head>
 
@@ -58,6 +60,93 @@
         </table>
         <br>
         <span><a href="index.html?Campus=Neyagawa">寝屋川キャンパス→</a></span>
+        <h1>バス出発時刻(四條畷電通大/四條畷キャンパス)</h1>
+        <select id="Bus_Time_Shijonawate">
+            <option value="Now" selected>現在時刻</option>
+            <option value="E1">1限終了時</option>
+            <option value="E2">2限終了時</option>
+            <option value="E3">3限終了時</option>
+            <option value="E4">4限終了時</option>
+            <option value="E5">5限終了時</option>
+        </select>
+        <table border="3">
+            <tr>
+                <th>
+                </th>
+                <th colspan="3">
+                    dep. 1st
+                </th>
+                <th colspan="3">
+                    dep. 2nd
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    会社
+                </th>
+                <th>
+                    出発時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th>
+                <th>
+                    出発時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    近鉄バス(四条畷駅方面)
+                </th>
+                <th>
+                    <span id="time_Kintetsu"></span>
+                </th>
+                <th><span id="To_Kintetsu"></span>
+                </th>
+                <th rowspan="2"><span>
+                        <font color="#ff0000">準備中</font>
+                    </span>
+                </th>
+                <th>
+                    <span id="time_Kintetsu_2nd"></span>
+                </th>
+                <th><span id="To_Kintetsu_2nd"></span>
+                </th>
+                <th rowspan="2"><span>
+                        <font color="#ff0000">準備中</font>
+                    </span>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    電通大スクールバス
+                </th>
+                <th>
+                    <span id="time_OECU_Shijonawate"></span>
+                </th>
+                <th>
+                    <span id="To_OECU_Shijonawate"></span>
+                </th>
+                <th>
+                    <span id="time_OECU_Shijonawate_2nd"></span>
+                </th>
+                <th>
+                    <span id="To_OECU_Shijonawate_2nd"></span>
+                </th>
+            </tr>
+        </table>
+        <font color="#ff0000">
+            2025年4月17日時点のダイヤです。<br>四條畷キャンパス行きのバスは寝屋川キャンパスに記載しています。<br>臨時ダイヤ、学休期間ダイヤ(休校期間ダイヤ)、祝日ダイヤには対応していません。
+        </font>
         <!-- <span>From:</span>
         <select name="Start_Sijonawate" id="Start_Sijonawate">
             <option value="2">1,2,3号館</option>
@@ -113,6 +202,77 @@
         </table>
         <br>
         <span><a href="index.html?Campus=Shijonawate">四條畷キャンパス→</a></span>
+        <h1>バス出発時刻(寝屋川キャンパス)</h1>
+        <select id="Bus_Time_Neyagawa">
+            <option value="Now" selected>現在時刻</option>
+            <option value="E1">1限終了時</option>
+            <option value="E2">2限終了時</option>
+            <option value="E3">3限終了時</option>
+            <option value="E4">4限終了時</option>
+            <option value="E5">5限終了時</option>
+        </select>
+        <table border="3">
+            <tr>
+                <th>
+                </th>
+                <th colspan="3">
+                    dep. 1st
+                </th>
+                <th colspan="3">
+                    dep. 2nd
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    会社
+                </th>
+                <th>
+                    時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th>
+                <th>
+                    時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    電通大スクールバス
+                </th>
+                <th>
+                    <span id="time_OECU_Neyagawa"></span>
+                </th>
+                <th><span id="To_OECU_Neyagawa"></span>
+                </th>
+                <th><span>
+                        <font color="#ff0000">準備中</font>
+                    </span>
+                </th>
+                <th>
+                    <span id="time_OECU_Neyagawa_2nd"></span>
+                </th>
+                <th><span id="To_OECU_Neyagawa_2nd"></span>
+                </th>
+                <th>
+                    <span>
+                        <font color="#ff0000">準備中</font>
+                    </span>
+                </th>
+            </tr>
+        </table>
+        <font color="#ff0000">
+            2025年4月17日時点のダイヤです。<br>寝屋川キャンパス行きのバスと四条畷駅方面行きのバス(近鉄バス)は四條畷キャンパスに記載しています。<br>臨時ダイヤ、学休期間ダイヤ、祝日ダイヤには対応していません。
+        </font>
         <!-- <span>From:</span>
         <select name="Start_Neyagawa" id="Start_Neyagawa" disabled>
             <option value="A" disabled selected>A号館(非対応)</option>
@@ -122,10 +282,12 @@
         </select>
         <div id="output_Neyagawa" class="error">この機能は、寝屋川キャンパスは非対応です。</div> -->
     </div>
-    <p>Ver.1.6</p>
+    <span>※40fps以上が出ない端末であれば、25ミリ秒以上の遅延が発生します。</span>
+    <p>Ver.1.7</p>
     <div>
         <h2>更新ログ</h2>
         <div style="width: 100%; height: 200px; overflow-y: scroll; border: 1px #999999 solid;">
+            <div>Ver.1.7:バスの出発時刻を追加,遅延を最大25ミリ秒に変更</div>
             <div>Ver.1.6:カスタム機能を追加</div>
             <div>Ver.1.5:サイト名を改名 製作者の名前を明記 所要時間の表示を廃止</div>
             <div>Ver.1.4:所要時間の表示を実装(寝屋川キャンパスは非対応)</div>
@@ -136,6 +298,9 @@
         </div>
     </div>
     <br>
+    <font color="#ff0000">
+        【勤勉な学生に向けた注意事項】このサイトを授業中に見ると怠惰になります。見過ぎにはご注意ください。
+    </font>
     <div>
         不具合やご要望がありましたら、製作者までご連絡ください。
     </div>
@@ -161,7 +326,7 @@
             }
                 */
             FixedonUpdate();
-            setInterval(FixedonUpdate, 1000);
+            setInterval(FixedonUpdate, 25);
             console.log(Campus.selectedIndex);
             setInterval(Save, 1);
             // OnStartA();

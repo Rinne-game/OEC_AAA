@@ -17,6 +17,17 @@ function textA_Neyahawa(hours, minutes, seconds) {
     console.log("5:" + isOn_Neyagawa_5);
     if (isOn_Neyagawa_5 == null) isOn_Neyagawa_5 = */document.getElementById('Neyagawa_5').checked;
 
+    let Time = hours + ":" + minutes;
+    let SetTime_Neyagawa = document.getElementById("Bus_Time_Neyagawa").selectedIndex;
+    let time_Neyagawa = document.getElementById('time_OECU_Neyagawa');
+    let To_Neyagawa = document.getElementById('To_OECU_Neyagawa');
+    time_Neyagawa.textContent = getNextBusTime_OECU("Neyagawa", 0, SetTime_Neyagawa);
+    To_Neyagawa.textContent = getNextBus_To_OECU("Neyagawa", 0, SetTime_Neyagawa);
+    let time_Neyagawa2 = document.getElementById('time_OECU_Neyagawa_2nd');
+    let To_Neyagawa2 = document.getElementById('To_OECU_Neyagawa_2nd');
+    time_Neyagawa2.textContent = getNextBusTime_OECU("Neyagawa", 1, SetTime_Neyagawa);
+    To_Neyagawa2.textContent = getNextBus_To_OECU("Neyagawa", 1, SetTime_Neyagawa);
+
     if ((hours < 8 || (hours == 9 && minutes < 0)) && isOn_Neyagawa_1) {
         //1限までの時間
         let timeB = 8 * 60 + 59;
@@ -104,6 +115,25 @@ function textA_Sijounawate(hours, minutes, seconds) {
     console.log("5:" + isOn_Shijonawate_5);
     if (isOn_Shijonawate_5 == null) isOn_Shijonawate_5 = */document.getElementById('Shijonawate_5').checked;
 
+    let Time = hours + ":" + minutes;
+    let SetTime_Shijonawate = document.getElementById("Bus_Time_Shijonawate").selectedIndex;
+    let time_Shijonawate = document.getElementById('time_OECU_Shijonawate');
+    let To_Shijonawate = document.getElementById('To_OECU_Shijonawate');
+    time_Shijonawate.textContent = getNextBusTime_OECU("Shijonawate", 0, SetTime_Shijonawate);
+    To_Shijonawate.textContent = getNextBus_To_OECU("Shijonawate", 0, SetTime_Shijonawate);
+    let time_Kintetsu = document.getElementById('time_Kintetsu');
+    let To_Kintetsu = document.getElementById('To_Kintetsu');
+    time_Kintetsu.textContent = getNextBusTime(0, SetTime_Shijonawate);
+    To_Kintetsu.textContent = getNextBus_To(0, SetTime_Shijonawate);
+    let time_Shijonawate2 = document.getElementById('time_OECU_Shijonawate_2nd');
+    let To_Shijonawate2 = document.getElementById('To_OECU_Shijonawate_2nd');
+    time_Shijonawate2.textContent = getNextBusTime_OECU("Shijonawate", 1, SetTime_Shijonawate);
+    To_Shijonawate2.textContent = getNextBus_To_OECU("Shijonawate", 1, SetTime_Shijonawate);
+    let time_Kintetsu2 = document.getElementById('time_Kintetsu_2nd');
+    let To_Kintetsu2 = document.getElementById('To_Kintetsu_2nd');
+    time_Kintetsu2.textContent = getNextBusTime(1, SetTime_Shijonawate);
+    To_Kintetsu2.textContent = getNextBus_To(1, SetTime_Shijonawate);
+
     if ((hours < 8 || (hours == 9 && minutes < 30)) && isOn_Shijonawate_1) {
         //1限までの時間
         let timeB = 9 * 60 + 29;
@@ -182,4 +212,9 @@ function textA_Sijounawate(hours, minutes, seconds) {
     console.log("4:" + isOn_Shijonawate_4);
     console.log("5:" + isOn_Shijonawate_5);
     console.log("Sucsess!!!");*/
+}
+function isWeekend() {
+    const today = new Date();
+    const day = today.getDay(); // 日曜:0, 月曜:1, ..., 土曜:6
+    return day === 0 || day === 6;
 }
