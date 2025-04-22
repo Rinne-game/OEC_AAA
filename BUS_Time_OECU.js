@@ -176,3 +176,74 @@ function getNextBus_To_OECU(campus, off = 0, arg = 0) {
     // 次のバスがあれば返す
     return futureBuses.length > 0 ? futureBuses[off].To : "本日の運行は終了しました";
 }
+function getMinutesUntilNextBus_OECU(campus, off = 0, arg = 0) {
+    let BUS_Time = null;
+    if (isWeekend())
+        BUS_Time = BUS_Time_Holiday_Kintetsu;
+    else
+        BUS_Time = BUS_Time_Weekday_Kintetsu;
+
+    const now = new Date();
+    let currentMinutes = now.getHours() * 60 + now.getMinutes();
+    switch (campus) {
+        case "Shijonawate":
+            if (isWeekend())
+                BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
+            else
+                BUS_Time = BUS_Time_Weekday_OECU_Shijonawate;
+            switch (arg) {
+                case 1: currentMinutes = 11 * 60 + 15;
+                    break;
+                case 2: currentMinutes = 13 * 60 + 10;
+                    break;
+                case 3: currentMinutes = 15 * 60 + 40;
+                    break;
+                case 4: currentMinutes = 17 * 60 + 35;
+                    break;
+                case 5: currentMinutes = 19 * 60 + 30;
+                    break;
+                default: currentMinutes = now.getHours() * 60 + now.getMinutes();
+                    break;
+            }
+            break;
+        case "Neyagawa":
+            if (isWeekend())
+                BUS_Time = BUS_Time_Holiday_OECU_Neyagawa;
+            else
+                BUS_Time = BUS_Time_Weekday_OECU_Neyagawa;
+            switch (arg) {
+                case 1: currentMinutes = 10 * 60 + 45;
+                    break;
+                case 2: currentMinutes = 12 * 60 + 40;
+                    break;
+                case 3: currentMinutes = 15 * 60 + 10;
+                    break;
+                case 4: currentMinutes = 17 * 60 + 5;
+                    break;
+                case 5: currentMinutes = 19 * 60;
+                    break;
+                default: currentMinutes = now.getHours() * 60 + now.getMinutes();
+                    break;
+            }
+            break;
+    }
+
+    const futureBuses = BUS_Time
+        .map(bus => {
+            const [hours, minutes] = bus.time.split(":").map(Number);
+            return {
+                ...bus,
+                totalMinutes: hours * 60 + minutes
+            };
+        })
+        .filter(bus => bus.totalMinutes > currentMinutes)
+        .sort((a, b) => a.totalMinutes - b.totalMinutes);
+
+    if (futureBuses.length > off) {
+        const nextBus = futureBuses[off];
+        const diff = nextBus.totalMinutes - currentMinutes;
+        return diff;  // 残り時間（分）
+    } else {
+        return -1; // バスがもう無い
+    }
+}
