@@ -22,14 +22,15 @@
     <div style="display: none;">
         <span>キャンパス:</span>
         <select name="campus" id="Campus" disabled>
-            <option value="Neyahawa">寝屋川キャンパス</option>
-            <option value="Sijounawate" selected>四條畷キャンパス</option>
+            <option value="Neyagawa">寝屋川キャンパス</option>
+            <option value="Shijonawate" selected>四條畷キャンパス</option>
         </select>
     </div>
     <h2>
         <div id="clock">現在時刻:時刻を取得できません。</div><br>
         <div id="textA">次の授業まで:</div>
     </h2>
+    <!-- <button disabled>リンクで保存(準備中)</button> -->
     <div id="Kouji_Sijounawate">
         <span>校時表(四條畷キャンパス)</span>
         <table border="3">
@@ -74,6 +75,12 @@
             <option value="Shijonawate0">四條畷(清滝団地経由のみ[61])</option>
             <option value="Shijonawate1">四條畷(直行以外[61],[62])</option>
             <option value="Shijonawate2">四條畷(直行のみ[直行])</option>
+        </select>ダイヤ:
+        <select id="schedule_Shijonawate" disabled>
+            <option value="Auto" selected>自動</option>
+            <option value="normal">平日ダイヤ</option>
+            <option value="holiday">土日祝ダイヤ</option>
+            <option value="vacation" disabled>学休期間ダイヤ</option>
         </select>
         <table border="3">
             <tr>
@@ -158,9 +165,63 @@
                 </th>
             </tr>
         </table>
+<!-- <h1>バス出発時刻(四条畷)</h1>
+        <table border="3">
+            <tr>
+                <th>
+                </th>
+                <th colspan="4">
+                    dep. 1st
+                </th>
+                <th colspan="4">
+                    dep. 2nd
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    会社
+                </th>
+                <th>
+                    時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th><th>
+                    到着予定時刻(所要時間)
+                </th>
+                <th>
+                    時刻
+                </th>
+                <th>
+                    行き先
+                </th>
+                <th>
+                    出発までの時間
+                </th><th>
+                    到着予定時刻(所要時間)
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    近鉄バス(四條畷電通大方面)
+                </th>
+                <th colspan="4">
+                     <span>準備中です。今後のアップデートにご期待ください。</span>
+                </th>
+                <th colspan="4">
+                     <span>準備中です。今後のアップデートにご期待ください。</span>
+                </th>
+            </tr>
+        </table> -->
         <font color="#ff0000">
-            2025年4月17日時点のダイヤです。<br>四條畷キャンパス行きのバスは寝屋川キャンパスに記載しています。<br>臨時ダイヤ、学休期間ダイヤ(休校期間ダイヤ)、祝日ダイヤには対応していません。
+            電通大スクールバスは2025年4月17日時点のダイヤ、近鉄バスは2025年10月2日時点のダイヤです。<br>四條畷キャンパス行きのバスは寝屋川キャンパスに記載しています。<br>臨時ダイヤには対応していません。<br>本サイトでは、<a
+                href="https://national-holidays.jp/about.html"
+                target="_blank">国民の祝日API</a>を利用し、近鉄バスの平日ダイヤと土日祝ダイヤを自動で分ける処理を実装しています。
         </font>
+        <!-- <br>臨時ダイヤ、学休期間ダイヤ(休校期間ダイヤ)には対応していません。 -->
         <!-- <span>From:</span>
         <select name="Start_Sijonawate" id="Start_Sijonawate">
             <option value="2">1,2,3号館</option>
@@ -224,6 +285,12 @@
             <option value="E3">3限終了時</option>
             <option value="E4">4限終了時</option>
             <option value="E5">5限終了時</option>
+        </select>ダイヤ:
+        <select id="schedule_Neyagawa" disabled>
+            <option value="Auto" selected>自動</option>
+            <option value="normal">平日ダイヤ</option>
+            <option value="holiday">土日祝ダイヤ</option>
+            <option value="vacation" disabled>学休期間ダイヤ</option>
         </select>
         <table border="3">
             <tr>
@@ -285,7 +352,7 @@
             </tr>
         </table>
         <font color="#ff0000">
-            2025年4月17日時点のダイヤです。<br>寝屋川キャンパス行きのバスと四条畷駅方面行きのバス(近鉄バス)は四條畷キャンパスに記載しています。<br>臨時ダイヤ、学休期間ダイヤ、祝日ダイヤには対応していません。
+        2025年4月17日時点のダイヤです。<br>寝屋川キャンパス行きのバスと四条畷駅方面行きのバス(近鉄バス)は四條畷キャンパスに記載しています。<br>臨時ダイヤには対応していません。
         </font>
         <!-- <span>From:</span>
         <select name="Start_Neyagawa" id="Start_Neyagawa" disabled>
@@ -297,10 +364,11 @@
         <div id="output_Neyagawa" class="error">この機能は、寝屋川キャンパスは非対応です。</div> -->
     </div>
     <span>※40fps以上が出ない端末であれば、25ミリ秒以上の遅延が発生します。</span>
-    <p>Ver.1.8</p>
+    <p>Ver.2.0</p>
     <div>
         <h2>更新ログ</h2>
         <div style="width: 100%; height: 200px; overflow-y: scroll; border: 1px #999999 solid;">
+            <div>Ver.1.9:祝日ダイヤ(API使用)と学休期間ダイヤに自動で対応(一部未確認),近鉄バスのダイヤを10月2日以降のダイヤに変更</div>
             <div>Ver.1.8:出発までの時刻を追加</div>
             <div>Ver.1.7:バスの出発時刻を追加,遅延を最大25ミリ秒に変更</div>
             <div>Ver.1.6:カスタム機能を追加</div>
@@ -322,6 +390,12 @@
     <script>
         //
         window.onload = function () {
+            /*
+            if (localStorage.getItem("API_agree") != false) {
+                let agree = confirm("本サイトでは、国民の祝日APIを利用し、近鉄バスの平日ダイヤと土日祝ダイヤを自動で分ける処理を実装しています。\nこのAPIでは、アクセスログ情報が保管されます。\nこのAPIの使用に同意しますか?");
+                localStorage.setItem("API_agree", agree);
+            }*/
+            //本サイトでは、国民の祝日APIを利用し、近鉄バスの平日ダイヤと土日祝ダイヤを自動で分ける処理を実装しています。このAPIの使用に同意しますか?
             let Campus = document.getElementById('Campus');
             const params = new URLSearchParams(location.search);
             switch (params.get("Campus")) {
@@ -340,9 +414,15 @@
                 Campus.selectedIndex = sessionStorage.getItem('Campus');
             }
                 */
+            /*
+
+         let schedule_Kintetsu = document.getElementById('schedule_Kintetsu').selectedIndex;
+         if (isWeekend())
+             schedule_Kintetsu = 1;
+         else
+             schedule_Kintetsu = 0;*/
             FixedonUpdate();
             setInterval(FixedonUpdate, 25);
-            console.log(Campus.selectedIndex);
             setInterval(Save, 1);
             // OnStartA();
         };
@@ -359,7 +439,7 @@
                     Kouji_Sijounawate.style.display = 'block';
                     Kouji_Neyagawa.style.display = 'none';
                     break;
-                case "Neyahawa":
+                case "Neyagawa":
                     Kouji_Neyagawa.style.display = 'block';
                     Kouji_Sijounawate.style.display = 'none';
                     break;
@@ -371,6 +451,33 @@
             var hours = now.getHours();
             var minutes = now.getMinutes();
             var seconds = now.getSeconds();
+            let Campus = document.getElementById('Campus').value;
+            if (Campus == "Neyagawa") {
+                let schedule_Kintetsu = document.getElementById('schedule_Neyagawa').selectedIndex;
+                let Bus_Time_Neyagawa = document.getElementById('Bus_Time_Neyagawa').selectedIndex;
+                updateBusTimes_OECU(Campus, Bus_Time_Neyagawa);
+                // document.getElementById('textA').innerText = "修正中"; return;
+                if (seconds != 0) {
+                    updateClassStatus(hours, minutes, (60 - seconds), "Neyagawa");
+                }
+                else {
+                    updateClassStatus(hours, (minutes - 1), (0), "Neyagawa");
+                }
+            }
+            else {
+                //schedule_Kintetsu
+                let schedule_Kintetsu = document.getElementById('schedule_Shijonawate').selectedIndex;
+                let Bus_Time_Shijonawate = document.getElementById('Bus_Time_Shijonawate').selectedIndex;
+                let Bus_Filter_Shijonawate = document.getElementById('Filter_Kintetsu').selectedIndex;
+                updateBusTimes(Bus_Time_Shijonawate, Bus_Filter_Shijonawate, schedule_Kintetsu);
+                updateBusTimes_OECU(Campus, Bus_Time_Shijonawate);
+                if (seconds != 0) {
+                    updateClassStatus(hours, minutes, (60 - seconds), "Shijonawate");
+                }
+                else {
+                    updateClassStatus(hours, (minutes - 1), (0), "Shijonawate");
+                }
+            }
 
             // ゼロパディングを行う
             hours = hours < 10 ? '0' + hours : hours;
@@ -380,25 +487,6 @@
             // 時刻を表示する
             var timeString = hours + ':' + minutes + ':' + seconds;
             document.getElementById('clock').innerText = "現在時刻:" + timeString;
-
-            let Campus = document.getElementById('Campus').value;
-            if (Campus == "Neyahawa") {
-                // document.getElementById('textA').innerText = "修正中"; return;
-                if (seconds != 0) {
-                    textA_Neyahawa(hours, minutes, (60 - seconds));
-                }
-                else {
-                    textA_Neyahawa(hours, (minutes - 1), (0));
-                }
-            }
-            else {
-                if (seconds != 0) {
-                    textA_Sijounawate(hours, minutes, (60 - seconds));
-                }
-                else {
-                    textA_Sijounawate(hours, (minutes - 1), (0));
-                }
-            }
         }
     </script>
 
