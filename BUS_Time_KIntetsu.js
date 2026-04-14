@@ -1,51 +1,54 @@
-const BUS_Time_Weekday_Kintetsu = [
-    { time: "9:26", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "10:15", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "11:22", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "11:30", To: "四条畷(直行)", id: 2 },
-    { time: "11:35", To: "四条畷(直行)", id: 2 },
-    { time: "12:44", To: "四条畷(直行)", id: 2 },//追加
-    { time: "13:14", To: "四条畷(直行)", id: 2 },
-    { time: "13:19", To: "四条畷(直行)", id: 2 },
-    { time: "13:41", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "13:50", To: "四条畷(直行)", id: 2 },
-    { time: "13:55", To: "四条畷(直行)", id: 2 },
-    { time: "14:20", To: "四条畷(直行)", id: 2 },
-    { time: "14:26", To: "四条畷(直行)", id: 2 },
-    { time: "14:40", To: "四条畷(直行)", id: 2 },
-    { time: "14:52", To: "四条畷(直行)", id: 2 },
-    { time: "15:11", To: "四条畷(清滝団地経由)", id: 0 },//変更
-    { time: "15:50", To: "四条畷(直行)", id: 2 },
-    { time: "15:55", To: "四条畷(直行)", id: 2 },
-    { time: "16:00", To: "四条畷(直行)", id: 2 },
-    { time: "16:13", To: "四条畷", id: 1 },
-    { time: "16:30", To: "四条畷(直行)", id: 2 },
-    { time: "16:43", To: "四条畷", id: 1 },
-    { time: "17:00", To: "四条畷(直行)", id: 2 },
-    { time: "17:13", To: "四条畷", id: 1 },
-    { time: "17:43", To: "四条畷", id: 1 },
-    { time: "17:50", To: "四条畷(直行)", id: 2 },
-    { time: "17:55", To: "四条畷(直行)", id: 2 },
-    { time: "18:20", To: "四条畷", id: 1 },
-    { time: "18:44", To: "四条畷", id: 1 },
-    { time: "19:15", To: "四条畷(四条畷神社前までの各バス停に停まる最終)" },
-    { time: "19:40", To: "四条畷(直行)", id: 2 },
-    { time: "19:50", To: "四条畷(直行)", id: 2 },
-    { time: "20:10", To: "四条畷(直行)", id: 2 },
-    { time: "20:40", To: "四条畷(直行,最終)", id: 2 }
-];
-const BUS_Time_Holiday_Kintetsu = [
-    { time: "8:41", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "9:26", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "10:15", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "11:22", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "12:51", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "13:41", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "14:26", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "15:11", To: "四条畷(清滝団地経由)", id: 0 },
-    { time: "16:43", To: "四条畷", id: 1 },
-    { time: "17:28", To: "四条畷(最終)", id: 1 }
-];
+const _BUS_Time = {
+    BUS_Time_Weekday: [
+        { time: "8:56", To: "四条畷", id: 1 },
+        { time: "9:45", To: "四条畷", id: 1 },
+        { time: "10:52", To: "四条畷", id: 1 },
+        { time: "11:00", To: "四条畷(直通)", id: 2 },
+        { time: "11:05", To: "四条畷(直通)", id: 2 },
+        { time: "12:13", To: "四条畷(直通)", id: 2 },
+        { time: "12:43", To: "四条畷(直通)", id: 2 },
+        { time: "12:48", To: "四条畷(直通)", id: 2 },
+        { time: "13:11", To: "四条畷", id: 1 },
+        { time: "13:20", To: "四条畷(直通)", id: 2 },
+        { time: "13:25", To: "四条畷(直通)", id: 2 },
+        { time: "13:50", To: "四条畷(直通)", id: 2 },
+        { time: "13:56", To: "四条畷", id: 1 },
+        { time: "14:10", To: "四条畷(直通)", id: 2 },
+        { time: "14:22", To: "四条畷(直通)", id: 2 },
+        { time: "14:41", To: "四条畷", id: 1 },
+        { time: "15:20", To: "四条畷(直通)", id: 2 },
+        { time: "15:25", To: "四条畷(直通)", id: 2 },
+        { time: "15:30", To: "四条畷(直通)", id: 2 },
+        { time: "15:43", To: "四条畷", id: 1 },
+        { time: "16:00", To: "四条畷(直通)", id: 2 },
+        { time: "16:13", To: "四条畷", id: 1 },
+        { time: "16:30", To: "四条畷(直通)", id: 2 },
+        { time: "16:43", To: "四条畷", id: 1 },
+        { time: "17:13", To: "四条畷", id: 1 },
+        { time: "17:20", To: "四条畷", id: 1 },
+        { time: "17:25", To: "四条畷(直通)", id: 2 },
+        { time: "17:50", To: "四条畷(直通)", id: 2 },
+        { time: "18:14", To: "四条畷", id: 1 },
+        { time: "18:45", To: "四条畷(四条畷神社前までの各バス停に停まる最終)", id: 1 },
+        { time: "19:10", To: "四条畷(直通)", id: 2 },
+        { time: "19:20", To: "四条畷(直通)", id: 2 },
+        { time: "19:40", To: "四条畷(直通)", id: 2 },
+        { time: "20:10", To: "四条畷(直通,最終)", id: 2 }
+    ],
+    BUS_Time_Holiday: [
+        { time: "8:41", To: "四条畷", id: 1 },
+        { time: "9:26", To: "四条畷", id: 1 },
+        { time: "10:15", To: "四条畷", id: 1 },
+        { time: "11:22", To: "四条畷", id: 1 },
+        { time: "12:51", To: "四条畷", id: 1 },
+        { time: "13:41", To: "四条畷", id: 1 },
+        { time: "14:26", To: "四条畷", id: 1 },
+        { time: "15:11", To: "四条畷", id: 1 },
+        { time: "16:41", To: "四条畷", id: 1 },
+        { time: "17:28", To: "四条畷(四条畷神社前までの各バス停に停まる最終)", id: 1 },
+        { time: "18:02", To: "四条畷(直通,最終)", id: 2 }
+    ]
+};
 //清滝団地経由:0,通常:1,直行:2
 //console.log("info:schedule>>" + schedule);
 function getNextBusTime(off = 0, arg = 0, Filter = 0, schedule = -1) {
@@ -53,16 +56,16 @@ function getNextBusTime(off = 0, arg = 0, Filter = 0, schedule = -1) {
     switch (schedule) {
         /*
         case 0:
-            BUS_Time = BUS_Time_Weekday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
         case 1:
-            BUS_Time = BUS_Time_Holiday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Holiday;
             break;*/
         default:
             if (isWeekend())
-                BUS_Time = BUS_Time_Holiday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Holiday;
             else
-                BUS_Time = BUS_Time_Weekday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
     }
     const now = new Date();
@@ -107,23 +110,23 @@ function getNextBusTime(off = 0, arg = 0, Filter = 0, schedule = -1) {
         .sort((a, b) => a.totalMinutes - b.totalMinutes);
 
     // 次のバスがあれば返す
-    return futureBuses.length > 0 ? futureBuses[off].time : "";
+    return futureBuses.length > off ? futureBuses[off].time : "";
 }
 function getNextBus_To(off = 0, arg = 0, Filter = 0, schedule = -1) {
     let BUS_Time = null;
     switch (schedule) {
         /*
         case 0:
-            BUS_Time = BUS_Time_Weekday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
         case 1:
-            BUS_Time = BUS_Time_Holiday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Holiday;
             break;*/
         default:
             if (isWeekend())
-                BUS_Time = BUS_Time_Holiday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Holiday;
             else
-                BUS_Time = BUS_Time_Weekday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
     }
     const now = new Date();
@@ -168,23 +171,23 @@ function getNextBus_To(off = 0, arg = 0, Filter = 0, schedule = -1) {
         .sort((a, b) => a.totalMinutes - b.totalMinutes);
 
     // 次のバスがあれば返す
-    return futureBuses.length > 0 ? futureBuses[off].To : "本日の運行は終了しました";
+    return futureBuses.length > off ? futureBuses[off].To : "本日の運行は終了しました";
 }
 function getMinutesUntilNextBus(off = 0, arg = 0, Filter = 0, schedule = -1) {
     let BUS_Time = null;
     switch (schedule) {
         /*
         case 0:
-            BUS_Time = BUS_Time_Weekday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
         case 1:
-            BUS_Time = BUS_Time_Holiday_Kintetsu;
+            BUS_Time = _BUS_Time.BUS_Time_Holiday;
             break;*/
         default:
             if (isWeekend())
-                BUS_Time = BUS_Time_Holiday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Holiday;
             else
-                BUS_Time = BUS_Time_Weekday_Kintetsu;
+                BUS_Time = _BUS_Time.BUS_Time_Weekday;
             break;
     }
 

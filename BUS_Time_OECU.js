@@ -1,68 +1,60 @@
 const BUS_Time_Weekday_OECU_Shijonawate = [
     { time: "10:30", To: "寝屋川キャンパス" },
-    { time: "11:50", To: "寝屋川キャンパス" },
-    { time: "12:50", To: "寝屋川キャンパス" },
-    { time: "13:50", To: "寝屋川キャンパス" },
-    { time: "14:50", To: "寝屋川キャンパス" },
-    { time: "15:50", To: "寝屋川キャンパス" },
-    { time: "16:50", To: "寝屋川キャンパス" },
-    { time: "17:45", To: "寝屋川キャンパス" },
-    { time: "17:50", To: "寝屋川キャンパス" },
-    { time: "18:50", To: "寝屋川キャンパス" },
+    { time: "11:30", To: "寝屋川キャンパス" },
+    { time: "12:30", To: "寝屋川キャンパス" },
+    { time: "13:30", To: "寝屋川キャンパス" },
+    { time: "14:30", To: "寝屋川キャンパス" },
+    { time: "15:30", To: "寝屋川キャンパス" },
+    { time: "16:30", To: "寝屋川キャンパス" },
+    { time: "17:15", To: "寝屋川キャンパス" },
+    { time: "17:30", To: "寝屋川キャンパス" },
+    { time: "18:30", To: "寝屋川キャンパス" },
+    { time: "19:10", To: "寝屋川キャンパス" },
     { time: "19:50", To: "寝屋川キャンパス" },
     { time: "20:50", To: "寝屋川キャンパス(最終)" }
 ];
 const BUS_Time_Holiday_OECU_Shijonawate = [
     { time: "10:30", To: "寝屋川キャンパス" },
-    { time: "11:50", To: "寝屋川キャンパス" },
-    { time: "12:50", To: "寝屋川キャンパス" },
-    { time: "13:50", To: "寝屋川キャンパス" },
-    { time: "14:50", To: "寝屋川キャンパス" },
-    { time: "15:50", To: "寝屋川キャンパス" },
-    { time: "16:50", To: "寝屋川キャンパス" },
-    { time: "17:50", To: "寝屋川キャンパス" },
-    { time: "18:50", To: "寝屋川キャンパス" },
-    { time: "19:50", To: "寝屋川キャンパス(最終)" }
-];
-const BUS_Time_Vacation_OECU_Shijonawate = [
-    { time: "10:30", To: "寝屋川キャンパス" },
-    { time: "11:50", To: "寝屋川キャンパス" },
-    { time: "12:50", To: "寝屋川キャンパス" },
-    { time: "13:50", To: "寝屋川キャンパス" },
-    { time: "14:50", To: "寝屋川キャンパス" },
-    { time: "15:50", To: "寝屋川キャンパス" },
-    { time: "16:50", To: "寝屋川キャンパス" },
-    { time: "17:50", To: "寝屋川キャンパス" },
-    { time: "18:50", To: "寝屋川キャンパス" },
+    { time: "11:30", To: "寝屋川キャンパス" },
+    { time: "12:30", To: "寝屋川キャンパス" },
+    { time: "13:30", To: "寝屋川キャンパス" },
+    { time: "14:30", To: "寝屋川キャンパス" },
+    { time: "15:30", To: "寝屋川キャンパス" },
+    { time: "16:30", To: "寝屋川キャンパス" },
+    { time: "17:30", To: "寝屋川キャンパス" },
+    { time: "18:30", To: "寝屋川キャンパス" },
+    { time: "19:10", To: "寝屋川キャンパス" },
     { time: "19:50", To: "寝屋川キャンパス" },
     { time: "20:50", To: "寝屋川キャンパス(最終)" }
-]; const BUS_Time_Weekday_OECU_Neyagawa = [
-    { time: "8:25", To: "四條畷キャンパス" },
+];
+const BUS_Time_Weekday_OECU_Neyagawa = [
+    { time: "8:00", To: "四條畷キャンパス" },
     { time: "8:30", To: "四條畷キャンパス" },
+    { time: "8:40", To: "四條畷キャンパス" },
     { time: "9:05", To: "四條畷キャンパス" },
     { time: "9:10", To: "四條畷キャンパス" },
     { time: "10:00", To: "四條畷キャンパス" },
     { time: "11:00", To: "四條畷キャンパス" },
-    { time: "12:20", To: "四條畷キャンパス" },
-    { time: "13:20", To: "四條畷キャンパス" },
-    { time: "14:20", To: "四條畷キャンパス" },
-    { time: "15:20", To: "四條畷キャンパス" },
-    { time: "16:20", To: "四條畷キャンパス" },
-    { time: "17:20", To: "四條畷キャンパス" },
-    { time: "18:20", To: "四條畷キャンパス(最終)" },
+    { time: "12:00", To: "四條畷キャンパス" },
+    { time: "13:00", To: "四條畷キャンパス" },
+    { time: "14:00", To: "四條畷キャンパス" },
+    { time: "15:00", To: "四條畷キャンパス" },
+    { time: "16:00", To: "四條畷キャンパス" },
+    { time: "17:00", To: "四條畷キャンパス" },
+    { time: "18:00", To: "四條畷キャンパス(最終)" },
 ];
 const BUS_Time_Holiday_OECU_Neyagawa = [
     { time: "8:25", To: "四條畷キャンパス" },
     { time: "9:05", To: "四條畷キャンパス" },
     { time: "10:00", To: "四條畷キャンパス" },
     { time: "11:00", To: "四條畷キャンパス" },
-    { time: "12:20", To: "四條畷キャンパス" },
-    { time: "13:20", To: "四條畷キャンパス" },
-    { time: "14:20", To: "四條畷キャンパス" },
-    { time: "15:20", To: "四條畷キャンパス" },
-    { time: "16:20", To: "四條畷キャンパス" },
-    { time: "17:20", To: "四條畷キャンパス" },
-    { time: "18:20", To: "四條畷キャンパス(最終)" },
+    { time: "12:00", To: "四條畷キャンパス" },
+    { time: "13:00", To: "四條畷キャンパス" },
+    { time: "14:00", To: "四條畷キャンパス" },
+    { time: "15:00", To: "四條畷キャンパス" },
+    { time: "16:00", To: "四條畷キャンパス" },
+    { time: "17:00", To: "四條畷キャンパス" },
+    { time: "18:00", To: "四條畷キャンパス(最終)" },
 ];
 
 function getNextBusTime_OECU(campus, off = 0, arg = 0) {
@@ -101,7 +93,7 @@ function getNextBusTime_OECU(campus, off = 0, arg = 0) {
                     BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 1:
-                    BUS_Time = BUS_Time_Vacation_OECU_Shijonawate;
+                    BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 2:
                     BUS_Time = BUS_Time_Weekday_OECU_Shijonawate;
@@ -176,7 +168,7 @@ function getNextBus_To_OECU(campus, off = 0, arg = 0) {
                     BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 1:
-                    BUS_Time = BUS_Time_Vacation_OECU_Shijonawate;
+                    BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 2:
                     BUS_Time = BUS_Time_Weekday_OECU_Shijonawate;
@@ -250,7 +242,7 @@ function getMinutesUntilNextBus_OECU(campus, off = 0, arg = 0) {
                     BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 1:
-                    BUS_Time = BUS_Time_Vacation_OECU_Shijonawate;
+                    BUS_Time = BUS_Time_Holiday_OECU_Shijonawate;
                     break;
                 case 2:
                     BUS_Time = BUS_Time_Weekday_OECU_Shijonawate;

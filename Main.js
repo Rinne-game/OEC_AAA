@@ -8,7 +8,7 @@ const baseClassSchedule = [
 
 function updateClassStatus(hours, minutes, seconds, campus) {
     const timeNow = (hours * 60 + minutes + seconds / 60);
-    const classes = getAdjustedClassSchedule(campus);
+    const classes = getAdjustedClassSchedule();
     const display = document.getElementById("textA");
 
     for (let i = 0; i < classes.length; i++) {
@@ -18,8 +18,8 @@ function updateClassStatus(hours, minutes, seconds, campus) {
         if (!isChecked) continue;
 
         const prevEnd = i === 0 ? 0 : classes[i - 1].end;
-        console.log("time>>" + hours + ":" + minutes + "(" + timeNow + ")");
-        console.log("id:[" + c.checkboxId + "]>>" + isChecked1.checked + "time:" + prevEnd + "-" + c.start + "-" + c.end + ",[Next:" + (timeNow >= prevEnd && timeNow < c.start) + ",Now:" + (timeNow >= c.start && timeNow < c.end) + "]");
+        // console.log("time>>" + hours + ":" + minutes + "(" + timeNow + ")");
+        // console.log("id:[" + c.checkboxId + "]>>" + isChecked1.checked + "time:" + prevEnd + "-" + c.start + "-" + c.end + ",[Next:" + (timeNow >= prevEnd && timeNow < c.start) + ",Now:" + (timeNow >= c.start && timeNow < c.end) + "]");
         if (timeNow < c.start) {
             const diff = Math.ceil(c.start - timeNow);
             display.innerText = `次の授業まで: ${diff}分${seconds}秒`;
@@ -33,13 +33,13 @@ function updateClassStatus(hours, minutes, seconds, campus) {
 
     display.innerText = "";
 }
-function getAdjustedClassSchedule(campus) {
-    const offset = campus === "Neyagawa" ? -30 : 0;
+function getAdjustedClassSchedule() {
+    const offset = /*campus === "Neyagawa" ? -30 : 0*/-30;
     return baseClassSchedule.map(cls => ({
         ...cls,
         start: cls.start + offset,
         end: cls.end + offset,
-        checkboxId: `${campus}_${cls.checkboxId}`
+        checkboxId: `Neyagawa_${cls.checkboxId}`
     }));
 } function isWithinPeriod(startDateStr, endDateStr) {
     const now = new Date(); // 現在日時
