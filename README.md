@@ -1,10 +1,9 @@
 # 大阪電通生向けかゆいところに手が届くサイト
 かゆいところに手が届くサイトです
-# 四條畷キャンパス
-https://rinne-game.github.io/OEC_AAA/index.html?Campus=Shijonawate
+# URL
+https://rinne-game.github.io/OEC_AAA/
 ## QRコード
-![qrcode_rinne-game github io (1)](https://github.com/user-attachments/assets/3cec4d5d-b1c5-460d-bb42-21ec8d719812)
-# 寝屋川キャンパス
-https://rinne-game.github.io/OEC_AAA/index.html?Campus=Neyagawa
-## QRコード
-![qrcode_rinne-game github io](https://github.com/user-attachments/assets/9072fd90-ec5f-4c59-8891-8df43d29421c)
+<img width="450" height="450" alt="qrcode_rinne-game github io" src="https://github.com/user-attachments/assets/3fdabbcc-b00a-46e8-8509-c5653fc1f9d0" />  
+
+# お知らせ
+製作者が今年で卒業予定のため、このサイトは、**製作者の卒業を持って**、提供を終了します。
